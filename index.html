@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href= "style.css" rel=stylesheet type="text/css">
+    <title>CSS Documentation</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header> CSS Documentation</header>
+        <ul>
+          <li><a class="nav-link" href="#cssintroduction">CSS Introduction</a></li>
+          <li><a class="nav-link" href="#css_selectors">CSS Selectors</a></li>
+          <li><a class="nav-link" href="#how_to_add_css">How to add CSS</a></li>
+          <li><a class="nav-link" href="#css_colors">CSS Colors</a></li>
+          <li><a class="nav-link" href="#css_backgrounds">CSS Backgrounds</a></li>
+          <li><a class="nav-link" href="#css_borders">CSS Borders</a></li>
+          <li><a class="nav-link" href="#css_margins">CSS Margins</a></li>
+          <li><a class="nav-link" href="#css_paddng">CSS Padding</a></li>
+          <li><a class="nav-link" href="#css_box_model">CSS Box Model</a></li>
+          <li><a class="nav-link" href="#css_list">CSS List</a></li>
+          <li><a class="nav-link" href="#css_navigation_bar">CSS Navigation Bar</a></li>
+          <li><a class="nav-link" href="#css_forms">CSS Forms</a></li>
+          <li><a class="nav-link" href="#css_website_layout">CSS Website Layout</a></li>
+          <li><a class="nav-link" href="#refrence">Refrence</a></li>
+        </ul>
+      </nav>
+      <main id="main-doc">
+        <section class="main-section" id="cssintroduction">
+          <header>CSS Introduction</header>
+          <article>
+            <p>CSS is the language we use to style a Web page.
+            </p>
+            <p>What is CSS?</p>
+            <ul>
+              <li>CSS stands for Cascading Style Sheets</li>
+              <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+              <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+              <li>External stylesheets are stored in CSS files</li>
+            </ul>
+            </p>
+            <p>Why Use CSS?</p>
+            <p>CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.</p>
+            <p>CSS Solved a Big Problem</p>
+            <p>HTML was NEVER intended to contain tags for formatting a web page!
+      
+              HTML was created to describe the content of a web page, like:
+      
+            <h1>This is a heading</h1>
+      
+            <p>This is a paragraph.</p>
+      
+            When tags like <font>, and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. Development of large websites, where fonts and color information were added to every single page, became a long and expensive process.
+      
+              To solve this problem, the World Wide Web Consortium (W3C) created CSS.
+      
+              CSS removed the style formatting from the HTML page!</p>
+      
+              <p>CSS Saves a Lot of Work!</p>
+              <p>The style definitions are normally saved in external .css files.
+      
+                With an external stylesheet file, you can change the look of an entire website by changing just one file!</p>
+          </article>
+        </section>
+        <section class="main-section" id="css_selectors">
+          <header>CSS Selectors</header>
+          <article>
+            <p>
+              A CSS selector selects the HTML element(s) you want to style.
+            </p>
+            <p>We can divide CSS selectors into five categories:</p>
+            <ul>
+              <li>Simple selectors (select elements based on name, id, class)</li>
+              <li>Combinator selectors (select elements based on a specific relationship between them)</li>
+              <li>Pseudo-class selectors (select elements based on a certain state)</li>
+              <li>Pseudo-elements selectors (select and style a part of an element)</li>
+              <li>Attribute selectors (select elements based on an attribute or attribute value)</li>
+            </ul>
+            <p>Example</p>
+            <p>Here, all
+            <p> elements on the page will be center-aligned, with a red text color: </p>
+            <code>p {
+              text-align: center;
+              color: red;
+              }</code>
+            <p>The CSS id Selector</p>
+            <p>The id selector uses the id attribute of an HTML element to select a specific element.
+      
+              The id of an element is unique within a page, so the id selector is used to select one unique element!
+      
+              To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p>
+            <p>Example</p>
+            <p>The CSS rule below will be applied to the HTML element with id="para1": </p>
+            <code>#para1 {
+              text-align: center;
+              color: red;
+              }</code>
+            <p>The CSS class Selector</p>
+            <p>The class selector selects HTML elements with a specific class attribute.
+      
+              To select elements with a specific class, write a period (.) character, followed by the class name.
+            </p>
+            <p>Example</p>
+            <p>In this example all HTML elements with class="center" will be red and center-aligned:
+            </p>
+            <code>.center {
+              text-align: center;
+              color: red;
+              }</code>
+            <p>The CSS Universal Selector</p>
+            <p>The universal selector (*) selects all HTML elements on the page.</p>
+            <p>Example</p>
+            <p>The CSS rule below will affect every HTML element on the page:</p>
+            <code>* {
+              text-align: center;
+              color: blue;
+              }</code>
+            <p>The CSS Grouping Selector</p>
+            <p>It will be better to group the selectors, to minimize the code.
+      
+              To group selectors, separate each selector with a comma.</p>
+            <code>h1, h2, p {
+              text-align: center;
+              color: red;
+              }</code>
+          </article>
+        </section>
+        <section class="main-section" id="how_to_add_css">
+          <header>How to add CSS</header>
+          <article>
+            <p>When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet.</p>
+            <p>Three Ways to Insert CSS</p>
+            <p>There are three ways of inserting a style sheet:</p>
+            <ul>
+              <li>External CSS
+              <li>
+              <li>Internal CSS
+              <li>
+              <li>Inline CSS
+              <li>
+            </ul>
+            <p>External CSS</p>
+            <p>With an external style sheet, you can change the look of an entire website by changing just one file!
+      
+              Each HTML page must include a reference to the external style sheet file inside the
+              <link> element, inside the head section.
+            </p>
+      
+            <p>An external style sheet can be written in any text editor, and must be saved with a .css extension.
+      
+              The external .css file should not contain any HTML tags.</p>
+            <p>Internal CSS</p>
+            <p>An internal style sheet may be used if one single HTML page has a unique style.
+      
+              The internal style is defined inside the style element, inside the head section. </p>
+            <p>Inline CSS</p>
+            <p>An inline style may be used to apply a unique style for a single element.
+      
+              To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.</p>
+            <p>Cascading Order</p>
+            <p>What style will be used when there is more than one style specified for an HTML element?
+      
+              All the styles in a page will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:</p>
+            <ol>
+              <li>Inline style (inside an HTML element)</li>
+              <li>External and internal style sheets (in the head section)</li>
+              <li>Browser default</li>
+            </ol>
+            <p>So, an inline style has the highest priority, and will override external and internal styles and browser defaults.</p>
+          </article>
+        </section>
+        <section class="main-section" id="css_colors">
+          <header>CSS Colors</header>
+          <article>
+            <p>Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.</p>
+            <p>CSS Color Names</p>
+            <p>In CSS, a color can be specified by using a predefined color name. CSS/HTML support 140 standard color names.</p>
+            <p>CSS Background Color</p>
+            <p>You can set the background color for HTML elements</p>
+            <p>Example</p>
+            <code>
+              <h1 style="background-color:DodgerBlue;">Hello World </h1>
+            </code>
+            <p>CSS Text Color</p>
+            <p>You can set the color of text</p>
+            <code>
+              <h1 style="color:Tomato;">Hello World</h1>
+            </code>
+            <p>CSS Border Color</p>
+            <p>You can set the color of border</p>
+            <code>
+              <h1 style="border:2px solid Tomato;">Hello World</h1>
+              <h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+              <h1 style="border:2px solid Violet;">Hello World</h1>
+            </code>
+            <p>CSS Color Values</p>
+            <p>In CSS, colors can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values</p>
+          </article>
+        </section>
+        <section class="main-section" id="css_backgrounds">
+          <header>CSS Backgrounds</header>
+          <article>
+            <p>The CSS background properties are used to add background effects for elements.</p>
+            <p>There are serveral CSS background properities</p>
+            <ul>
+              <li>background-color</li>
+              <li>background-image</li>
+              <li>background-repeat</li>
+              <li>background-attachment</li>
+              <li>background-position</li>
+              <li>background (shorthand property)</li>
+            </ul>
+            <p>CSS background-color</p>
+            <p>The background-color property specifies the background color of an element.</p>
+            <p>With CSS, a color is most often specified by:</p>
+            <ul>
+              <li>a valid color name - like "red"</li>
+              <li>a HEX value - like "#ff0000"</li>
+              <li>an RGB value - like "rgb(255,0,0)"</li>
+            </ul>
+            <p>You can set the background color for any HTML elements</p>
+            <p>Opacity / Transparency</p>
+            <p>The opacity property specifies the opacity/transparency of an element. It can take a value from 0.0 - 1.0. The lower value, the more transparent</p>
+            <p>Note: When using the opacity property to add transparency to the background of an element, all of its child elements inherit the same transparency. This can make the text inside a fully transparent element hard to read.</p>
+            <p>Transparency using RGBA</p>
+            <p>In addition to RGB, you can use an RGB color value with an alpha channel (RGBA) - which specifies the opacity for a color.
+      
+              An RGBA color value is specified with: rgba(red, green, blue, alpha). The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).</p>
+          </article>
+        </section>
+        <section class="main-section" id="css_borders">
+          <header>CSS Borders</header>
+          <article>
+            <p>The CSS border properties allow you to specify the style, width, and color of an element's border.</p>
+            <p>CSS Border Style</p>
+            <p>The border-style property specifies what kind of border to display.
+      
+              The following values are allowed:</p>
+            <ul>
+              <li>dotted - Defines a dotted border</li>
+              <li>dashed - Defines a dashed border</li>
+              <li>solid - Defines a solid border</li>
+              <li>double - Defines a double border</li>
+              <li>groove - Defines a 3D grooved border. The effect depends on the border-color value</li>
+              <li>ridge - Defines a 3D ridged border. The effect depends on the border-color value</li>
+              <li>inset - Defines a 3D inset border. The effect depends on the border-color value</li>
+              <li>outset - Defines a 3D outset border. The effect depends on the border-color value</li>
+              <li>none - Defines no border</li>
+              <li>hidden - Defines a hidden border</li>
+            </ul>
+            <p>The border-style property can have from one to four values (for the top border, right border, bottom border, and the left border).</p>
+          </article>
+        </section>
+        <section class="main-section" id="css_margins">
+          <header>CSS Margins</header>
+          <p>Margins are used to create space around elements, outside of any defined borders.</p>
+          <p>The CSS margin properties are used to create space around elements, outside of any defined borders.
+      
+            With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).</p>
+          <p>Margin - Individual Sides</p>
+          <p>CSS has properties for specifying the margin for each side of an element:</p>
+          <ul>
+            <li>margin-top</li>
+            <li>margin-right</li>
+            <li>margin-bottom</li>
+            <li>margin-left</li>
+          </ul>
+          <p>All the margin properties can have the following values:</p>
+          <ul>
+            <li>auto - the browser calculates the margin</li>
+            <li>length - specifies a margin in px, pt, cm, etc.</li>
+            <li>% - specifies a margin in % of the width of the containing element</li>
+            <li>inherit - specifies that the margin should be inherited from the parent element</li>
+          </ul>
+          <p>Tip:Negative values are allowed.</p>
+          <p>Margin - Shorthand Property</p>
+          <p>To shorten the code, it is possible to specify all the margin properties in one property.
+      
+            The margin property is a shorthand property for the following individual margin properties:</p>
+          <ul>
+            <li>margin-top</li>
+            <li>margin-right</li>
+            <li>margin-bottom</li>
+            <li>margin-left</li>
+          </ul>
+          <p>So, here is how it works:
+      
+            If the margin property has four values:</p>
+          <ul>
+            <li>margin: 25px 50px 75px 100px;</li>
+            <li>top margin is 25px</li>
+            <li>right margin is 50px</li>
+            <li>bottom margin is 75px</li>
+            <li>left margin is 100px</li>
+          </ul>
+          <p>If the margin property has three values:</p>
+          <ul>
+            <li>margin: 25px 50px 75px;</li>
+            <li>top margin is 25px</li>
+            <li>right and left margins are 50px</li>
+            <li>bottom margin is 75px</li>
+          </ul>
+          <p>If the margin property has two values:</p>
+          <ul>
+            <li>margin: 25px 50px;</li>
+            <li>top and bottom margins are 25px</li>
+            <li>right and left margins are 50px</li>
+          </ul>
+          <p>If the margin property has one value:</p>
+          <ul>
+            <li>margin: 25px;</li>
+            <li>all four margins are 25px</li>
+          </ul>
+          <p>The auto Value</p>
+          <p>You can set the margin property to auto to horizontally center the element within its container.
+      
+            The element will then take up the specified width, and the remaining space will be split equally between the left and right margins.</p>
+          <p>The inherit Value</p>
+          </article>
+        </section>
+        <section class="main-section" id="css_paddng">
+          <header>CSS Padding</header>
+          <article>
+            <p>Padding is used to create space around an element's content, inside of any defined borders.</p>
+            <p>The CSS padding properties are used to generate space around an element's content, inside of any defined borders.
+      
+              With CSS, you have full control over the padding. There are properties for setting the padding for each side of an element (top, right, bottom, and left).</p>
+            <p>Padding - Individual Sides</p>
+            <p>CSS has properties for specifying the padding for each side of an element:</p>
+            <ul>
+              <li>padding-top</li>
+              <li>padding-right</li>
+              <li>padding-bottom</li>
+              <li>padding-left</li>
+            </ul>
+            <p>All the padding properties can have the following values:</p>
+            <ul>
+              <li>length - specifies a padding in px, pt, cm, etc.</li>
+              <li>% - specifies a padding in % of the width of the containing element</li>
+              <li>inherit - specifies that the padding should be inherited from the parent element</li>
+            </ul>
+            <p>Note: Negative values are not allowed.</p>
+      
+            <p>Padding - Shorthand Property</p>
+            <p>To shorten the code, it is possible to specify all the padding properties in one property.
+      
+              The padding property is a shorthand property for the following individual padding properties:</p>
+            <ul>
+              <li>padding-top</li>
+              <li>padding-right</li>
+              <li>padding-bottom</li>
+              <li>padding-left</li>
+            </ul>
+            <p>So, here is how it works:
+      
+              If the padding property has four values:</p>
+            <p>padding: 25px 50px 75px 100px;</p>
+            <ul>
+              <li>top padding is 25px</li>
+              <li>right padding is 50px</li>
+              <li>bottom padding is 75px</li>
+              <li>left padding is 100px</li>
+            </ul>
+            <p>If the padding property has three values:</p>
+            <p>padding: 25px 50px 75px;</p>
+            <ul>
+              <li>top padding is 25px</li>
+              <li>right and left paddings are 50px</li>
+              <li>bottom padding is 75px</li>
+            </ul>
+            <p>If the padding property has two values:</p>
+            <ul>
+              <li>top and bottom paddings are 25px</li>
+              <li>right and left paddings are 50px</li>
+            </ul>
+            <p>If the padding property has one value:</p>
+            <p>padding: 25px;</p>
+            <ul>
+              <li>all four paddings are 25px</li>
+            </ul>
+            <p>Padding and Element Width</p>
+            <p>The CSS width property specifies the width of the element's content area. The content area is the portion inside the padding, border, and margin of an element (the box model).
+      
+              So, if an element has a specified width, the padding added to that element will be added to the total width of the element. This is often an undesirable result.</p>
+            <p>Example</p>
+            <p>Here, the div element is given a width of 300px. However, the actual width of the div element will be 350px (300px + 25px of left padding + 25px of right padding):</p>
+            <code>div {
+              width: 300px;
+              padding: 25px;
+              }</code>
+            <p>To keep the width at 300px, no matter the amount of padding, you can use the box-sizing property. This causes the element to maintain its actual width; if you increase the padding, the available content space will decrease.</p>
+            <p>Example</p>
+            <p>Use the box-sizing property to keep the width at 300px, no matter the amount of padding:</p>
+            <code>div {
+              width: 300px;
+              padding: 25px;
+              box-sizing: border-box;
+              }</code>
+          </article>
+        </section>
+        <section class="main-section" id="css_box_model">
+          <header>CSS Box Model</header>
+          <article>
+            <p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.</p>
+            <p>Explanation of the different parts:</p>
+            <ul>
+              <li>Content - The content of the box, where text and images appear</li>
+              <li>Padding - Clears an area around the content. The padding is transparent</li>
+              <li>Border - A border that goes around the padding and content</li>
+              <li>Margin - Clears an area outside the border. The margin is transparent</li>
+            </ul>
+            <p>The box model allows us to add a border around elements, and to define space between elements. </p>
+            <p>Width and Height of an Element</p>
+            <p>In order to set the width and height of an element correctly in all browsers, you need to know how the box model works.</p>
+            <p>Important: When you set the width and height properties of an element with CSS, you just set the width and height of the content area. To calculate the full size of an element, you must also add padding, borders and margins.</p>
+            <p>The total width of an element should be calculated like this:
+      
+              Total element width = width + left padding + right padding + left border + right border + left margin + right margin
+      
+              The total height of an element should be calculated like this:
+      
+              Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin</p>
+          </article>
+        </section>
+      
+        <section class="main-section" id="css_list">
+          <header> CSS List</header>
+          <article>
+            <p>HTML Lists and CSS List Properties</p>
+            <p>In HTML, there are two main types of lists:</p>
+            <ul>
+              <li>unordered lists (<ul>) - the list items are marked with bullets
+              </li>
+              <li>ordered lists (<ol>) - the list items are marked with numbers or letters</li>
+            </ul>
+            <p>The CSS list properties allow you to:</p>
+            <ul>
+              <li>Set different list item markers for ordered lists</li>
+              <li>Set different list item markers for unordered lists</li>
+              <li>Set an image as the list item marker</li>
+              <li>Add background colors to lists and list items</li>
+            </ul>
+            <p>Different List Item Markers</p>
+            <p>The list-style-type property specifies the type of list item marker.</p>
+            <p>An Image as The List Item Marker</p>
+            <p>The list-style-image property specifies an image as the list item marker:</p>
+            <code>ul {
+              list-style-image: url('sqpurple.gif');
+              }</code>
+            <p>Position The List Item Markers</p>
+            <p>The list-style-position property specifies the position of the list-item markers (bullet points).
+      
+              "list-style-position: outside;" means that the bullet points will be outside the list item. The start of each line of a list item will be aligned vertically. </p>
+            <p>"list-style-position: inside;" means that the bullet points will be inside the list item. As it is part of the list item, it will be part of the text and push the text at the start</p>
+            <p>Remove Default Settings</p>
+            <p>The list-style-type:none property can also be used to remove the markers/bullets. Note that the list also has default margin and padding. To remove this, add margin:0 and padding:0 to ul or ol</p>
+            <p>List - Shorthand property</p>
+            <p>The list-style property is a shorthand property. It is used to set all the list properties in one declaration:</p>
+            <code>ul {
+              list-style: square inside url("sqpurple.gif");
+              }</code>
+            <p>When using the shorthand property, the order of the property values are:</p>
+            <ul>
+              <li>list-style-type (if a list-style-image is specified, the value of this property will be displayed if the image for some reason cannot be displayed)</li>
+              <li>list-style-position (specifies whether the list-item markers should appear inside or outside the content flow)</li>
+              <li>list-style-image (specifies an image as the list item marker)</li>
+            </ul>
+            <p>If one of the property values above are missing, the default value for the missing property will be inserted, if any.</p>
+            <p>Styling List With Colors</p>
+            <p>We can also style lists with colors, to make them look a little more interesting.</p>
+            <p>Anything added to the
+            <ol> or <ul> tag, affects the entire list, while properties added to the <li> tag will affect the individual list items:</p>
+                  <code>ol {
+                    background: #ff9999;
+                    padding: 20px;
+                    }
+      
+                    ul {
+                    background: #3399ff;
+                    padding: 20px;
+                    }
+      
+                    ol li {
+                    background: #ffe5e5;
+                    padding: 5px;
+                    margin-left: 35px;
+                    }
+      
+                    ul li {
+                    background: #cce5ff;
+                    margin: 5px;
+                    }</code>
+          </article>
+        </section>
+        <section class="main-section" id="css_navigation_bar" >
+        <header>CSS Navigation Bar</header>
+          <article>
+            <p>Navigation Bars</p>
+            <p>Having easy-to-use navigation is important for any web site.
+      
+              With CSS you can transform boring HTML menus into good-looking navigation bars.</p>
+            <p>Navigation Bar = List of Links</p>
+            <p>A navigation bar needs standard HTML as a base.
+      
+              In our examples we will build the navigation bar from a standard HTML list.
+      
+              A navigation bar is basically a list of links, so using the ul and li elements makes perfect sense</p>
+            <p>list-style-type: none; - Removes the bullets. A navigation bar does not need list markers
+              Set margin: 0; and padding: 0; to remove browser default settings</p>
+          </article>
+        </section>
+        <section class="main-section" id="css_forms">
+          <header>CSS Forms</header>
+          <article>
+            <p>Use the width property to determine the width of the input field:</p>
+            <code>input {
+              width: 100%;
+              }</code>
+            <p>The example above applies to all <input> elements. If you only want to style a specific input type, you can use attribute selectors:</p>
+            <ul>
+              <li>input[type=text] - will only select text fields</li>
+              <li>input[type=password] - will only select password fields</li>
+              <li>input[type=number] - will only select number fields</li>
+              <li>etc..
+              </li>
+            </ul>
+            <p>Padded Inputs</p>
+            <p>Use the padding property to add space inside the text field.
+      
+              Tip: When you have many inputs after each other, you might also want to add some margin, to add more space outside of them:</p>
+            <code>input[type=text] {
+              width: 100%;
+              padding: 12px 20px;
+              margin: 8px 0;
+              box-sizing: border-box;
+              }</code>
+            <p>Note that we have set the box-sizing property to border-box. This makes sure that the padding and eventually borders are included in the total width and height of the elements.</p>
+            <p>Bordered Inputs</p>
+            <p>Use the border property to change the border size and color, and use the border-radius property to add rounded corners:</p>
+            <code>input[type=text] {
+              border: 2px solid red;
+              border-radius: 4px;
+              }</code>
+            <p>If you only want a bottom border, use the border-bottom property:</p>
+            <code>input[type=text] {
+              border: none;
+              border-bottom: 2px solid red;
+              }</code>
+            <p>Colored Inputs</p>
+            <p>Use the background-color property to add a background color to the input, and the color property to change the text color:</p>
+            <code>input[type=text] {
+              background-color: #3CBC8D;
+              color: white;
+              }</code>
+            <p>Focused Inputs</p>
+            <p>By default, some browsers will add a blue outline around the input when it gets focus (clicked on). You can remove this behavior by adding outline: none; to the input.</p>
+            <p>Input with icon/image</p>
+            <p>If you want an icon inside the input, use the background-image property and position it with the background-position property.</p>
+            <p>Animated Search Input</p>
+            <p>In this example we use the CSS transition property to animate the width of the search input when it gets focus.</p>
+            <p>Styling Textareas</p>
+            <p>Tip: Use the resize property to prevent textareas from being resized (disable the "grabber" in the bottom right corner)</p>
+            <p>Responsive Form</p>
+            <p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
+          </article>
+        </section>
+        <section class="main-section" id="css_website_layout">
+          <header>CSS Website Layout</header>
+          <article>
+            <p>A website is often divided into headers, menus, content and a footer</p>
+            <p>There are tons of different layout designs to choose from. However, the structure above, is one of the most common, and we will take a closer look at it in this tutorial.</p>
+            <p>Header</p>
+            <p>A header is usually located at the top of the website (or right below a top navigation menu). It often contains a logo or the website name</p>
+            <code>.header {
+              background-color: #F1F1F1;
+              text-align: center;
+              padding: 20px;
+              }</code>
+            <p>Navigation Bar</p>
+            <p>A navigation bar contains a list of links to help visitors navigating through your website</p>
+      
+            <p>Tip: To create a 2-column layout, change the width to 50%. To create a 4-column layout, use 25%, etc.</p>
+            <p>Tip: A more modern way of creating column layouts, is to use CSS Flexbox. However, it is not supported in Internet Explorer 10 and earlier versions. If you require IE6-10 support, use floats (as shown above).</p>
+            <p>Unequal Columns</p>
+            <p>The main content is the biggest and the most important part of your site.
+      
+              It is common with unequal column widths, so that most of the space is reserved for the main content. The side content (if any) is often used as an alternative navigation or to specify information relevant to the main content. Change the widths as you like, only remember that it should add up to 100% in total</p>
+            <p>Footer</p>
+            <p>The footer is placed at the bottom of your page. It often contains information like copyright and contact info</p>
+          </article>
+        </section>
+        <section class="main-section" id="refrence">
+          <header>Refrence</header>
+          <article>
+            <ul>
+              <li>All the documentation in this page is taken from
+                <a href="https://www.w3schools.com/css/default.asp" target="-blank">w3school</a>
+              </li>
+            </ul>
+          </article>
+        </section>
+      </main>
+</body>
+</html>
